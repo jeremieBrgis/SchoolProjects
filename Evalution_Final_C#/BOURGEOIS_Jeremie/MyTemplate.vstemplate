@@ -1,0 +1,35 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>BOURGEOIS_Jeremie</Name>
+    <Description>&lt;Aucune description disponible&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>BOURGEOIS_Jeremie</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="BOURGEOIS_Jeremie.csproj" File="BOURGEOIS_Jeremie.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Adherent.cs">Adherent.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AdherentNonPresentException.cs">AdherentNonPresentException.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Association.cs">Association.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Categorie.cs">Categorie.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Constantes.cs">Constantes.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ICotisable.cs">ICotisable.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MembreBureau.cs">MembreBureau.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MembreSimple.cs">MembreSimple.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Personne.cs">Personne.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Role.cs">Role.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
