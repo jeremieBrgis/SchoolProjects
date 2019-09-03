@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" crossorigin="anonymous">
+<div class="text-center">
+<app-header></app-header>
+  <br>
+<div *ngIf='isLoading'>
+  <p>Chargement...</p>
+  <img src='/assets/images/pizzaSpinner.gif'>
+</div>
+<div *ngIf='!isLoading'>
+  <h2>Liste des pizzas :</h2>
+  <label>Prix max: {{prixMax}} € </label>
+  <br>
+  <input type="range" min="5" max="9" id="rangePrix" name="rangePrix" [(ngModel)]="prixMax" >
+  <ul class="list-unstyled">
+    <li *ngFor="let pizza of pizzas">
+
+      <div *ngIf="pizza.prix <= prixMax">
+      <img src={{pizza.image}}>
+        <p><strong>Pâte : </strong> {{pizza.pate}}</p>
+      <a><strong>Ingrédients : </strong> </a>
+      <a>{{pizza.base}}</a>
+      <a *ngIf="pizza.miel">, miel</a>
+      <a *ngIf="pizza.anchois">, anchois</a>
+      <a *ngIf="pizza.jambon">, jambon</a>
+      <a *ngIf="pizza.magret">, magret</a>
+        <p><strong>Prix : </strong>{{pizza.prix}} €</p>
+        <p><button class="btn btn-default" (click)="commanderPizzaService(pizza)">Commander</button></p>
+      </div>
+  </li>
+</ul>
+  <app-footer></app-footer>
+</div>
+</div>

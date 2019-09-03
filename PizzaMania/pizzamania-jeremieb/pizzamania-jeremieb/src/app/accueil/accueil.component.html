@@ -1,0 +1,35 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body class="text-center">
+<app-header></app-header>
+<div *ngIf='isLoading'>
+  <p>Chargement...</p>
+  <img src='/assets/images/pizzaSpinner.gif'>
+</div>
+<div *ngIf='!isLoading'>
+<p> Bienvenue sur Pizza Mania</p>
+<br>
+<div *ngIf="lastPizza">
+  <h3>Dernière pizza acheté :</h3>
+  <p><strong>Pâte : </strong>
+  <a>{{lastPizza.pate}}</a>
+  </p>
+  <p><strong>Ingrédiant : </strong>
+  <a>{{lastPizza.base}}</a>
+  <a *ngIf="lastPizza.miel">, miel</a>
+  <a *ngIf="lastPizza.anchois">, anchois</a>
+  <a *ngIf="lastPizza.jambon">, jambon</a>
+  <a *ngIf="lastPizza.magret">, magret</a>
+  </p>
+  <p><strong>Prix :</strong> {{this.getPrix()}} €</p>
+
+  <p><button class="btn btn-default" (click)="commanderPizzaService(lastPizza)">Commander cette Pizza</button></p>
+<br>
+</div>
+<p><strong>Commander ci-dessous votre pizza ou...composer la vous même !</strong></p>
+<button class="btn btn-default" routerLink="/formulaire">Creez votre pizza</button>
+<button class="btn btn-default" routerLink="/carte">Commander à la carte</button>
+<app-footer></app-footer>
+</div>
+</body>
